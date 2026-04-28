@@ -1,0 +1,28 @@
+{
+  "appRuntime": {
+    "kind": "web",
+    "runner": "docker",
+    "entry": {
+      "type": "dockerfile",
+      "context": ".",
+      "dockerfile": "Dockerfile",
+      "service": "app"
+    },
+    "url": {
+      "hostPort": 3000,
+      "path": "/"
+    },
+    "portMapping": {
+      "containerPort": 5000
+    },
+    "ready": {
+      "path": "/",
+      "timeoutSeconds": 360
+    },
+    "open": {
+      "path": "/"
+    },
+    "composeEnv": {},
+    "env": {}
+  }
+}
